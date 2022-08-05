@@ -1,0 +1,19 @@
+@import "../../../reset";
+@import "../../../variables";
+
+.about-us-section {
+  max-width: $desktop-width;
+  min-height: 670px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 115px 86px;
+  &__card-holder {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}

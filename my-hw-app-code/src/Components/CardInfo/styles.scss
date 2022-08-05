@@ -1,0 +1,24 @@
+@import "../../../reset";
+@import "../../../variables";
+@import "../../../mixins";
+
+.card {
+  width: 238px;
+  height: 211px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    width: 70px;
+    height: 60px;
+  }
+  h3 {
+    @include fontstyle($main-font, 20, 22, $font-color-dark, 600);
+    text-align: center;
+  }
+  p {
+    @include fontstyle($main-font, 15, 22, $font-color-dark);
+    text-align: center;
+  }
+}
