@@ -22,7 +22,7 @@ const Banner = () => {
 
   return (
     <section className="banner-section">
-      <SectionTitle data={BANNER_DATA.mainTitle} />
+      <SectionTitle titleData={BANNER_DATA.mainTitle} />
       <div className="banner-section__btn-container">
         {BANNER_DATA.btnLabels.map((label, i) => (
           <Button
@@ -32,7 +32,7 @@ const Banner = () => {
                 ? "banner-section__button button_active"
                 : "banner-section__button"
             }
-            onClickF={() => setSelectedBtn(i)}
+            onClickFunc={() => setSelectedBtn(i)}
           />
         ))}
       </div>

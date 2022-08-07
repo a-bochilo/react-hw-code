@@ -8,7 +8,7 @@ import "./styles.scss";
 const AboutUs = () => {
   return (
     <section className="about-us-section">
-      <SectionTitle data={ABOUT_US_DATA.sectionTitle} />
+      <SectionTitle titleData={ABOUT_US_DATA.sectionTitle} />
       <div className="about-us-section__card-holder">
         {ABOUT_US_DATA.cardInfo.map(({ iconImg, title, subtitle }) => (
           <CardInfo iconImg={iconImg} title={title} subtitle={subtitle} />

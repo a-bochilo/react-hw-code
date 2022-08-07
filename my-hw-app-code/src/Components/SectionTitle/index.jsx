@@ -2,9 +2,8 @@ import React from "react";
 
 import "./styles.scss";
 
-const SectionTitle = (props) => {
-  const { data } = props;
-  const { title, subtitle, titleClass } = data;
+const SectionTitle = ({ titleData }) => {
+  const { title, subtitle, titleClass } = titleData;
 
   return (
     <div className={titleClass}>
