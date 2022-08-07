@@ -1,0 +1,19 @@
+@import "../../../reset";
+@import "../../../variables";
+
+.banner-section {
+  background: url("./img/bgImg.jpg") no-repeat center/cover;
+  min-height: 747px;
+  padding: 217px 0 77px 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  &__btn-container {
+    max-width: 516px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

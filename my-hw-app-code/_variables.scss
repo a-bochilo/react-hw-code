@@ -1,13 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-// fonts
+// FONTS
 $main-font: "Open Sans";
 $secondary-font: "Roboto";
 
-// colors
+// COLORS
+// font
 $font-color-dark: #000000;
+$font-color-light: #ffffff;
+// buttons
+$btn-bg-color-inactive: transparent;
+$btn-bg-color-active: #00897b;
+$btn-border-color-light: #ffffff;
+$btn-border-color-dark: #000000;
 
-// grid
+// GRID
 $desktop-width: 1372px;
 $smartphone-width: 320px;

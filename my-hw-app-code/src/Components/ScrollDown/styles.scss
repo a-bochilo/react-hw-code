@@ -1,0 +1,10 @@
+@import "../../../reset";
+@import "../../../variables";
+@import "../../../mixins";
+
+.arrow-down {
+  width: 34px;
+  height: 22px;
+  background: url("./img/arrowDown.svg") no-repeat center/cover;
+  cursor: pointer;
+}

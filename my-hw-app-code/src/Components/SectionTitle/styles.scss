@@ -1,0 +1,34 @@
+@import "../../../reset";
+@import "../../../variables";
+@import "../../../mixins";
+
+.main-title {
+  min-height: 105px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  h2 {
+    @include fontstyle($main-font, 70, 22, $font-color-light, 600);
+  }
+  p {
+    @include fontstyle($main-font, 30, 22, $font-color-light);
+    text-align: center;
+  }
+}
+
+.section-title {
+  max-width: 851px;
+  min-height: 127px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  h2 {
+    @include fontstyle($main-font, 36, 49, $font-color-dark, 700);
+  }
+  p {
+    @include fontstyle($main-font, 18, 24, $font-color-dark);
+    text-align: center;
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../../reset";
+@import "../../../variables";
+@import "../../../mixins";
+
+.banner-section {
+  &__button {
+    cursor: pointer;
+    width: 220px;
+    height: 70px;
+    @include fontstyle($secondary-font, 22, 26, $font-color-light, 700);
+    text-align: center;
+    border: 4px solid $btn-border-color-light;
+    background-color: $btn-bg-color-inactive;
+    margin: 19px;
+    &:hover {
+      border: none;
+      background-color: $btn-bg-color-active;
+    }
+  }
+  .button_active {
+    border: none;
+    background-color: $btn-bg-color-active;
+  }
+}
