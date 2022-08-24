@@ -1,0 +1,21 @@
+// @import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.nav-bar {
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 40px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    @include fontstyle($main-font, 20, 22, $font-color-dark, 600);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

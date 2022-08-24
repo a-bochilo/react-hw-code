@@ -1,0 +1,19 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.logo {
+  width: 200px;
+  height: 75px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    width: 83px;
+  }
+  p {
+    @include fontstyle($main-font, 16, 22, $font-color-dark);
+    margin: 0;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.footer {
+  background-color: $card-bg-color;
+  &__container {
+    max-width: $desktop-width;
+    height: 190px;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__notice-links-container {
+    height: 61px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    p {
+      @include fontstyle($main-font, 18, 18, $font-color-dark);
+    }
+  }
+  &__links-container {
+    height: 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 15px;
+  }
+}

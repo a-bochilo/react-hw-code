@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonComponent from "../../Components/ButtonComponent";
 import SectionTitle from "../../Components/SectionTitle";
 import Service from "../../Components/Service";
@@ -51,7 +51,6 @@ const OurServices = () => {
         <ButtonComponent
           btnLabel={OUR_SERVICES_DATA.btn.btnLabel}
           btnClass={OUR_SERVICES_DATA.btn.btnClass}
-          onClickFunc={() => console.log("click")}
         />
       </div>
     </section>

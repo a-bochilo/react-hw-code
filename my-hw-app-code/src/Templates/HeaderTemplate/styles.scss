@@ -1,0 +1,16 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.header {
+  background-color: $card-bg-color;
+  &__container {
+    max-width: $desktop-width;
+    height: 120px;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
