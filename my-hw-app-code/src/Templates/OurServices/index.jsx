@@ -1,25 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ButtonComponent from "../../Components/ButtonComponent";
 import SectionTitle from "../../Components/SectionTitle";
 import Service from "../../Components/Service";
+
 import { OUR_SERVICES_DATA } from "./constants";
 
 import "./styles.scss";
 
 const OurServices = () => {
-  function addFocusClass(e) {
-    const children = e.target.closest(".service").childNodes;
-    children.forEach((item) => {
-      item.classList.add("focus");
-    });
-  }
+  const [focusedService, setFocusedService] = useState(null);
+  const [bluredService, setBluredService] = useState(null);
 
-  function removeFocusClass(e) {
-    const children = e.target.closest(".service").childNodes;
-    children.forEach((item) => {
-      item.classList.remove("focus");
-    });
-  }
+  useEffect(() => {
+    const toggleFocusClass = () => {
+      if (bluredService)
+        bluredService.childNodes.forEach((item) => {
+          item.classList.remove("focus");
+        });
+      if (focusedService)
+        focusedService.childNodes.forEach((item) => {
+          item.classList.add("focus");
+        });
+    };
+    toggleFocusClass();
+  }, [focusedService, bluredService]);
 
   return (
     <section className="our-services-section">
@@ -31,9 +35,9 @@ const OurServices = () => {
         />
         <div
           className="our-services-section__services-holder"
-          onMouseOver={addFocusClass}
-          onMouseOut={removeFocusClass}
-          onBlur={removeFocusClass}
+          onMouseOver={(e) => setFocusedService(e.target.closest(".service"))}
+          onMouseOut={() => setBluredService(focusedService)}
+          onBlur={() => setBluredService(focusedService)}
         >
           {OUR_SERVICES_DATA.serviceInfo.map(
             ({ id, title, subtitle, iconImg, btnLabel, btnClass }) => (
