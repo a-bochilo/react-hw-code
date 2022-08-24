@@ -1,0 +1,22 @@
+@import "../../reset";
+@import "../../variables";
+
+.our-services-section {
+  background-color: $services-section-bg;
+  &__container {
+    max-width: $desktop-width;
+    min-height: 1505px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &__services-holder {
+    min-height: 923px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+  }
+}

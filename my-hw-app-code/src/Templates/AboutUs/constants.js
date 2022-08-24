@@ -11,18 +11,21 @@ export const ABOUT_US_DATA = {
   },
   cardInfo: [
     {
+      id: 0,
       title: "Awesome Icons",
       subtitle:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
       iconImg: internetImg,
     },
     {
+      id: 1,
       title: "One Page",
       subtitle:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
       iconImg: transferImg,
     },
     {
+      id: 2,
       title: "Awesome Icons",
       subtitle:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",

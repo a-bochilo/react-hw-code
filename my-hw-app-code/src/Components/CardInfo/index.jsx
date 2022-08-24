@@ -2,11 +2,9 @@ import React from "react";
 
 import "./styles.scss";
 
-const CardInfo = (props) => {
-  const { title, subtitle, iconImg } = props;
-
+const CardInfo = ({ title, subtitle, iconImg }) => {
   return (
-    <div className="card">
+    <div className="card-info">
       <img src={iconImg} alt="icon" />
       <h3>{title}</h3>
       <p>{subtitle}</p>

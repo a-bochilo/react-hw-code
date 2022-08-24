@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SectionTitle from "../../Components/SectionTitle";
-import Button from "../../Components/Button";
+import ButtonComponent from "../../Components/ButtonComponent";
 import ScrollDown from "../../Components/ScrollDown";
 
 import { BANNER_DATA } from "./constants";
@@ -22,10 +22,15 @@ const Banner = () => {
 
   return (
     <section className="banner-section">
-      <SectionTitle titleData={BANNER_DATA.mainTitle} />
+      <SectionTitle
+        title={BANNER_DATA.mainTitle.title}
+        subtitle={BANNER_DATA.mainTitle.subtitle}
+        titleClass={BANNER_DATA.mainTitle.titleClass}
+      />
       <div className="banner-section__btn-container">
         {BANNER_DATA.btnLabels.map((label, i) => (
-          <Button
+          <ButtonComponent
+            key={i}
             btnLabel={label}
             btnClass={
               i === selectedBtn

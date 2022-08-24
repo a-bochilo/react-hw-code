@@ -1,0 +1,57 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.banner-section {
+  &__button {
+    cursor: pointer;
+    width: 220px;
+    height: 70px;
+    @include fontstyle($secondary-font, 22, 26, $font-color-light, 700);
+    text-align: center;
+    border: 4px solid $btn-border-color-light;
+    background-color: $btn-bg-color-inactive;
+    margin: 19px;
+    &:hover {
+      border: none;
+      background-color: $btn-bg-color-active;
+    }
+  }
+  .button_active {
+    border: none;
+    background-color: $btn-bg-color-active;
+  }
+}
+
+.section-btn {
+  &_s {
+    cursor: pointer;
+    padding: 17px 14px;
+    @include fontstyle($main-font, 20, 22, $font-color-dark, 600);
+    text-align: center;
+    border: 2px solid $btn-border-color-dark;
+    background-color: $btn-bg-color-inactive;
+    margin: 19px;
+    &:hover {
+      border-color: transparent;
+      background-color: $btn-bg-color-active;
+      color: $font-color-light;
+    }
+    &.focus {
+      border: 2px solid $btn-border-color-light;
+      @include fontstyle($main-font, 20, 22, $font-color-light, 600);
+    }
+  }
+  &_l {
+    cursor: pointer;
+    padding: 24px 59px;
+    @include fontstyle($main-font, 20, 22, $font-color-light, 600);
+    text-align: center;
+    background-color: $btn-bg-color-active;
+    border: none;
+    margin-top: 45px;
+    &:hover {
+      box-shadow: 0px 10px 20px $shadow-color;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.service__modal-custom {
+  max-width: 1000px;
+  .modal-content {
+    background: $services-section-bg;
+    border-radius: 0;
+  }
+  h3 {
+    @include fontstyle($main-font, 36, 49, $font-color-dark, 700);
+    text-align: center;
+    padding: 20px;
+  }
+  p {
+    @include fontstyle($main-font, 18, 24, $font-color-dark);
+  }
+}

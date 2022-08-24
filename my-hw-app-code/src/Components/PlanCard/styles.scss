@@ -1,0 +1,59 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.plan {
+  width: 390px;
+  height: 670px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  background-color: $card-bg-color;
+  &__header {
+    height: 210px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $pricing-plan-card-header-bg;
+    h3 {
+      @include fontstyle($main-font, 25, 22, $font-color-light);
+    }
+    p {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-end;
+      white-space: pre;
+      @include fontstyle($main-font, 50, 40, $font-color-light);
+      .plan__currency {
+        @include fontstyle($main-font, 25, 22, $font-color-light);
+        align-self: flex-start;
+      }
+      .plan__period {
+        @include fontstyle($main-font, 20, 22, $font-color-light);
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  &__included-options {
+    width: 188px;
+    height: 280px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    p {
+      @include fontstyle($main-font, 17, 20, $font-color-dark);
+      border-bottom: 1px solid $pricing-plan-border;
+    }
+  }
+  &:hover {
+    box-shadow: 0px 3px 25px $shadow-color;
+  }
+}

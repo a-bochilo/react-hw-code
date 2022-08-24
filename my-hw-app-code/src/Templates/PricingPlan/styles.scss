@@ -1,0 +1,21 @@
+@import "../../reset";
+@import "../../variables";
+
+.pricing-plan-section {
+  background-color: $pricing-plan-section-bg;
+  &__container {
+    max-width: $desktop-width;
+    min-height: 1140px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &__plans-holder {
+    min-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}

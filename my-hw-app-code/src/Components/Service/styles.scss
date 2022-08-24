@@ -1,0 +1,17 @@
+@import "../../reset";
+@import "../../variables";
+
+.service {
+  width: 370px;
+  min-height: 439px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  padding: 40px 50px;
+  background-color: $card-bg-color;
+
+  &:hover {
+    background-color: $service-bg-color-active;
+    box-shadow: 0px 10px 20px $shadow-color;
+  }
+}
