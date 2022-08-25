@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import ButtonComponent from "../../Components/ButtonComponent";
+import LoaderComponent from "../../Components/LoaderComponent";
 import SectionTitle from "../../Components/SectionTitle";
 import Service from "../../Components/Service";
 
@@ -48,6 +49,7 @@ const OurServices = () => {
             titleClass={OUR_SERVICES_DATA.sectionTitle.titleClass}
           />
           <div className="our-services-section__services-holder">
+            {!data && <LoaderComponent />}
             {data &&
               data.map(({ id, title, description, image }) => (
                 <Service
@@ -59,6 +61,7 @@ const OurServices = () => {
                 />
               ))}
           </div>
+          {data && data.length < servicesCount && <LoaderComponent />}
           {servicesCount < 7 && (
             <ButtonComponent
               btnLabel={OUR_SERVICES_DATA.viewAllBtn.btnLabel}
