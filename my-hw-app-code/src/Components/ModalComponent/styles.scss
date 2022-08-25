@@ -3,10 +3,15 @@
 @import "../../mixins";
 
 .service__modal-custom {
-  max-width: 1000px;
+  max-width: $desktop-width;
   .modal-content {
     background: $services-section-bg;
     border-radius: 0;
+    display: flex;
+    align-items: center;
+  }
+  img {
+    max-width: 100%;
   }
   h3 {
     @include fontstyle($main-font, 36, 49, $font-color-dark, 700);

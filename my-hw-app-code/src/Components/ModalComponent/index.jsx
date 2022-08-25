@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Modal from "react-bootstrap/Modal";
+import { ServiceDataAndState } from "../../Templates/OurServices";
 import ButtonComponent from "../ButtonComponent";
 
 import "./styles.scss";
 
-function ModalComponent({ title, subtitle, btnLabel, btnClass, modalClass }) {
+function ModalComponent({ id, title, subtitle, modalClass, imgLg }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const { btnLabel, btnClass, focusedService } =
+    useContext(ServiceDataAndState);
+
   return (
     <>
       <ButtonComponent
         btnLabel={btnLabel}
-        btnClass={btnClass}
+        btnClass={id === focusedService ? `${btnClass} focus` : btnClass}
         onClickFunc={handleShow}
       />
 
@@ -24,13 +28,22 @@ function ModalComponent({ title, subtitle, btnLabel, btnClass, modalClass }) {
         animation={true}
         dialogClassName={modalClass}
       >
-        <h3>{title}</h3>
-        <p className="m-4">
-          {subtitle}
-          {subtitle}
-          {subtitle}
-          {subtitle}
-        </p>
+        <div className="container p-4">
+          <h3>{title}</h3>
+          <div className="row">
+            <div className="col-lg-4">
+              <img src={imgLg} alt="img" />
+            </div>
+            <div className="col-lg-8">
+              <p className="m-4">
+                {subtitle}
+                {subtitle}
+                {subtitle}
+                {subtitle}
+              </p>
+            </div>
+          </div>
+        </div>
 
         <Modal.Footer>
           <ButtonComponent

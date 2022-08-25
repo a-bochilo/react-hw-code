@@ -7,7 +7,7 @@ const CardInfo = ({ title, subtitle, iconImg }) => {
     <div className="card-info">
       <img src={iconImg} alt="icon" />
       <h3>{title}</h3>
-      <p>{subtitle}</p>
+      <p>{subtitle.length > 70 ? `${subtitle.slice(0, 70)}...` : subtitle}</p>
     </div>
   );
 };
