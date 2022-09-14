@@ -1,0 +1,29 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.contact-section {
+  background-color: $contact-section-bg;
+  &__container {
+    max-width: $desktop-width;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 0;
+  }
+  &__contact-holder {
+    p {
+      @include fontstyle($main-font, 22, 30, $font-color-light);
+    }
+  }
+  &__btn {
+    @include fontstyle($main-font, 26, 28, $font-color-light, 600);
+    background-color: $btn-bg-color-form;
+    border: none;
+  }
+  &__validation {
+    @include fontstyle($main-font, 26, 28, $font-color-error, 600);
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.secret-section {
+  background-color: $contact-section-bg;
+  &__container {
+    max-width: $desktop-width;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 0;
+  }
+}

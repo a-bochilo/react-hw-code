@@ -1,0 +1,27 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.blog-section {
+  background-color: $blog-section-bg;
+  &__container {
+    max-width: $desktop-width;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 0;
+  }
+  &__post {
+    h4 {
+      @include fontstyle($main-font, 30, 22, $font-color-dark, 600);
+    }
+    span {
+      @include fontstyle($main-font, 18, 22, $font-color-dark, 600);
+    }
+    p {
+      @include fontstyle($main-font, 18, 26, $font-color-dark);
+    }
+  }
+}

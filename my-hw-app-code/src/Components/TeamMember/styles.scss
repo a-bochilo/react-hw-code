@@ -1,0 +1,12 @@
+@import "../../reset";
+@import "../../variables";
+@import "../../mixins";
+
+.team-member {
+  &__name {
+    @include fontstyle($main-font, 24, 22, $font-color-dark, 600);
+  }
+  &__city {
+    @include fontstyle($main-font, 20, 22, $font-color-dark);
+  }
+}

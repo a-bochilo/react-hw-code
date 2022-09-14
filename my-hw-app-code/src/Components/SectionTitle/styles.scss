@@ -31,4 +31,9 @@
     @include fontstyle($main-font, 18, 24, $font-color-dark);
     text-align: center;
   }
+  &_light {
+    h2, p {
+      color: $font-color-light;
+    }
+  }
 }
