@@ -9,7 +9,7 @@ import "./styles.scss";
 
 const SecretTeamplate = () => {
   const { name, email, phone, message } = useSelector(
-    (state) => state.formData
+    (state) => state.formDataReducer.formData
   );
   const isAdmin = name === "admin" ? true : false;
 

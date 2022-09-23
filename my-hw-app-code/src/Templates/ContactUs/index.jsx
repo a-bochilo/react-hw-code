@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionTitle from "../../Components/SectionTitle";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
 import { formDataAC } from "../../Store/ActionCreators";
 import { useNavigate } from "react-router-dom";
 
@@ -36,8 +35,10 @@ const ContactUs = () => {
     if (currentValue !== "admin" && currentValue !== "user") {
       document.getElementById("validation").classList.remove("d-none");
       document.getElementById("send-btn").classList.add("disabled");
+      document.getElementById("nameInput").focus();
     } else {
       document.getElementById("send-btn").classList.remove("disabled");
+      document.getElementById("validation").classList.add("d-none");
     }
   };
 
@@ -81,6 +82,7 @@ const ContactUs = () => {
             <div className="row col-12">
               <div className="col-12 col-sm-6 p-4">
                 <Form.Control
+                  id="nameInput"
                   size="lg"
                   type="text"
                   placeholder="YOUR NAME"
@@ -89,11 +91,6 @@ const ContactUs = () => {
                     const currentValue = e.target.value.trim().toLowerCase();
                     setName(currentValue);
                     validationInput(currentValue);
-                  }}
-                  onFocus={(e) => {
-                    document
-                      .getElementById("validation")
-                      .classList.add("d-none");
                   }}
                 />
                 <Form.Control
@@ -133,7 +130,7 @@ const ContactUs = () => {
                 id="send-btn"
                 variant="primary"
                 type="primary"
-                className="col-12 col-sm-2 p-4 contact-section__btn"
+                className="col-12 col-sm-2 p-4 contact-section__btn disabled"
                 onClick={sendFormData}
               >
                 SEND

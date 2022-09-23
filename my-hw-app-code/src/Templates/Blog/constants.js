@@ -41,4 +41,8 @@ export const BLOG_DATA = {
         "Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...",
     },
   ],
+  btn: {
+    btnLabel: "MORE VIEW",
+    btnClass: "section-btn_l",
+  },
 };
